@@ -1,0 +1,76 @@
+body {
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    align-items:center;
+    background-image: linear-gradient(to top, #c21257, #c1006e, #b2008e, #8f00b4, #2b11dc);
+}
+
+button {
+    width: 300px;
+    height: 75px;
+    border: none;
+    outline: none;
+    border-radius: 20px;
+    box-shadow: 2px 5px 10px #000;
+    font-size: 30px;
+    color: lightblue;
+    position: relative;
+    overflow: hidden;
+    transition: 0.3s all;
+    cursor: pointer;
+}
+
+button:nth-child(1) {
+    background-color: salmon;
+}
+
+button:nth-child(2) {
+    background-color: lightseagreen;
+}
+
+button:active {
+    border: none;
+    transform: translate(2px, 10px);
+}
+
+.ripple1 {
+    width: 00px;
+    height: 000px;
+    background-color:rgba(255,255,255,0.5);
+    position: absolute;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    animation: aniRip1 1s ease-in-out;
+}
+
+@keyframes aniRip1 {
+    100% {
+        width: 200px;
+        height: 200px;
+        opacity: 0;
+    }
+}
+
+.ripple2 {
+    width: 0px;
+    height: 0px;
+    border: 0px solid #fff;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    animation: aniRip2 1s ease-in-out;
+}
+
+@keyframes aniRip2 {
+    100% {
+        width: 300px;
+        height: 300px;
+        border: 30px solid rgba(255,255,255,0.5);
+        opacity: 0;
+    }
+}

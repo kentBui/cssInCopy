@@ -1,0 +1,90 @@
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    overflow: hidden;
+    font-family: arial, sans-serif;
+    background-image: linear-gradient(to right top, #0f1011, #031120, #00112e, #000e39, #120541);
+}
+
+.notice {
+    position: absolute;
+    top: 20%;
+    text-align: center;
+}
+
+.title {
+    color: #fff;
+    font-size: 40px;
+}
+
+.notice p {
+    color: white;
+    font-size: 18px;
+}
+
+.notice a {
+    text-decoration: none;
+    color: #eee;
+    background-color: #f00;
+    border-radius: 30px;
+    padding: 5px 15px;
+    font-family: inherit;
+    font-size: 18px;
+    margin-top: 10px;
+    text-transform: capitalize;
+}
+
+.supermanFly {
+    width: 150px;
+    position: absolute;
+    top: 60%;
+    transform: rotate(30deg);
+    animation: animationFly 6s infinite linear;
+}
+
+.supermanFly img {
+    width: 100%;
+}
+
+@keyframes animationFly {
+    0% {
+        left: -200px;
+    }
+    100% {
+        left: 100%;
+    }
+}
+
+.start {
+    width: 3px;
+    height: 3px;
+    border-radius: 50%;
+    position: absolute;
+    animation: animationColor 3s infinite;
+}
+
+@keyframes animationColor {
+    0% {
+        box-shadow: 0 0 10px #fff;
+    }
+    20% {
+        box-shadow: 0 0 5px #fff;
+    }
+    40% {
+        box-shadow: 0 0 20px #fff;
+    }
+    60% {
+        box-shadow: 0 0 15px #fff;
+    }
+    80% {
+        box-shadow: 0 0 5px #fff;
+    }
+    100% {
+        box-shadow: 0 0 10px #fff;
+    }
+}
