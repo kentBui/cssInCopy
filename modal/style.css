@@ -1,0 +1,131 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+img {
+	display: block;
+	max-width: 100%;
+}
+.image1 {
+	max-width: 500px;
+	margin: auto;
+	margin-top: 100px;
+	position: relative;
+}
+
+.image1 .imageOrigin {
+	width: 100%;
+}
+
+.image1 .btnShow {
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	line-height: 40px;
+	text-align: center;
+	font-size: 20px;
+	background-color: #fff;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	cursor: pointer;
+	opacity: 0;
+	visibility: hidden;
+	transition: 0.3s linear;
+}
+
+.image1:hover .btnShow {
+	opacity: 1;
+	visibility: inherit;
+}
+
+.image1 .btnShow:hover {
+	background-color: #f00;
+	color: #fff;
+}
+
+.modal {
+	width: 100vw;
+	height: 100vh;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 10;
+	background-color: rgba(0,0,0,0.7);
+	display: none;
+}
+
+.modal .imageShow {
+	width: 80%;
+	max-width: 700px;
+	margin: auto;
+	padding-top: 150px;
+}
+
+.modal .close {
+	width: 40px;
+	height: 40px;
+	line-height: 40px;
+	text-align: center;
+	background-color: #333;
+	position: absolute;
+	top: 30px;
+	right: 30px;
+	font-size: 30px;
+	font-weight: bold;
+	color: #fff;
+	cursor: pointer;
+	user-select: none;
+}
+
+.image {
+	width: 80%;
+	max-width: 600px;
+	margin: auto;
+	margin-top: 100px;
+	padding: 15px;
+	background-color: #f5f5f5;
+}
+.image .img-box {
+	position: relative;
+}
+
+.image .img-box .imgOrigin {
+	width: 100%;
+}
+
+.image .img-box .layout {
+	position: absolute;
+	top: 0;
+	left: 0;
+	background-color: rgba(0,0,0,0.5);
+}
+.image .img-box .icon {
+	width: 40px;
+	height: 40px;
+	line-height: 40px;
+	text-align: center;
+	border-radius: 50%;
+	font-size: 20px;
+	background-color: #fff;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	cursor: pointer;
+	opacity: 0;
+	visibility: hidden;
+	transition: 0.3s linear;
+}
+
+.image:hover .img-box .icon {
+	opacity: 1;
+	visibility: inherit;
+}
+
+.image .img-box .icon:hover {
+	background-color: red;
+	color: white;
+}

@@ -1,0 +1,87 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+.container {
+	max-width: 1000px;
+	position: relative;
+	margin: auto;
+}
+
+.container .myslide{
+	position: relative;
+	display: none;
+	animation: fade 1s linear;
+}
+
+.myslide .number {
+	position: absolute;
+	top: 10px;
+	left: 10px;
+	color: #fff;
+}
+.myslide .caption {
+	position: absolute;
+	bottom: 10px;
+	left: 50%;
+	transform: translateX(-50%);
+	text-align: center;
+	color: #fff;
+	font-size: 20px;
+}
+.container .prev, .container .next {
+	width: 40px;
+	height: 60px;
+	position: absolute;
+	color: #fff;
+	top: 50%;
+	transform: translateY(-50%);
+	text-align: center;
+	line-height: 60px;
+	cursor: pointer;
+}
+
+.container .prev {
+	left: 0;
+}
+
+.container .next {
+	right: 0;
+}
+
+.container .prev:hover, .container .next:hover {
+	background-color: rgba(0,0,0,0.6);
+}
+
+.dots {
+	padding-top: 30px;
+}
+
+.dots .dot {
+	width: 15px;
+	height: 15px;
+	border-radius: 50%;
+	display: inline-block;
+	margin: 0 15px;
+	background-color: #ccc;
+	cursor: pointer;
+}
+
+.dots .dot:hover {
+	background-color: #999;
+}
+
+.dots .dot.active {
+	background-color: #999;
+}
+
+@keyframes fade {
+	from{
+		opacity: 0.4;
+	}
+	to {
+		opacity: 1;
+	}
+}

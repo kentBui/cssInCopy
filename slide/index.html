@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>slide</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<div class="container">
+		<div class="myslide">
+			<div class="number">1/4</div>
+			<div class="image">
+				<img src="images/img_lights_wide.jpg">
+			</div>
+			<div class="caption">Caption text 1</div>
+		</div>
+		<div class="myslide">
+			<div class="number">2/4</div>
+			<div class="image">
+				<img src="images/img_mountains_wide.jpg">
+			</div>
+			<div class="caption">Caption text 2</div>
+		</div>
+		<div class="myslide">
+			<div class="number">3/4</div>
+			<div class="image">
+				<img src="images/img_nature_wide.jpg">
+			</div>
+			<div class="caption">Caption text 3</div>
+		</div>
+		<div class="myslide">
+			<div class="number">4/4</div>
+			<div class="image">
+				<img src="images/img_snow_wide.jpg">
+			</div>
+			<div class="caption">Caption text 4</div>
+		</div>
+		<a class="prev" onclick="changeSlide(-1)">&#10094;</a>
+  		<a class="next" onclick="changeSlide(1)">&#10095;</a>
+	</div>
+	<div class="dots" style="text-align:center">
+	  <span class="dot active" onclick="curSlide(1)"></span>
+	  <span class="dot" onclick="curSlide(2)"></span>
+	  <span class="dot" onclick="curSlide(3)"></span>
+	  <span class="dot" onclick="curSlide(4)"></span>
+	</div>
+	<script type="text/javascript" src="index.js"></script>
+</body>
+</html>
