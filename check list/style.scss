@@ -1,0 +1,104 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(to right top, #333366, #005a94, #0082ae, #00a9ae, #00cc99);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .check-list {
+        width: 400px;
+        border: 1px solid gray;
+        background-image: linear-gradient(to right top, #181883, #0057bc, #008ede, #00c3ee, #29f6f6);
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        overflow: hidden;
+        .item {
+            height: 50px;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+            line-height: 50px;
+            display: grid;
+            grid-template-columns: 1fr 6fr 1fr;
+            align-items: center;
+            text-align: center;
+            position: relative;
+            input[type="checkbox"] {
+                appearance: none;
+                -webkit-appearance: none;
+                width: 22px;
+                height: 22px;
+                margin: auto;
+                z-index: 2;
+                background-color: white;
+                border: 1px solid aqua;
+                cursor: pointer;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                transition: all 0.3s linear;
+                &:before {
+                    content: "\f058";
+                    font-family: "fontAwesome";
+                    color: blue;
+                    opacity: 0;
+                    transition: all 0.3s linear;
+                    font-size: 18px;
+                }
+                &:checked {
+                    &:before {
+                        opacity: 1;
+                    }
+                    & ~ label {
+                        color: #ff9900;
+                        &::before {
+                            left: 85%;
+                        }
+                    }
+                    & ~ span {
+                        color: #ff9900;
+                    }
+                }
+                &:hover {
+                    border: 3px solid aqua;
+                    transform: scale(1.2);
+                }
+            }
+            label {
+                font-size: 20px;
+                text-transform: capitalize;
+                color: rgba(0, 0, 0, 0.8);
+                cursor: pointer;
+                transition: all 0.3s linear;
+                user-select: none;
+                &:hover {
+                    color: cornsilk;
+                    text-shadow: 0 0 5px black;
+                }
+                &:before {
+                    content: "";
+                    width: 120px;
+                    height: 100%;
+                    background-color: rgba(153, 247, 250, 0.137);
+                    position: absolute;
+                    top: 0;
+                    left: -55px;
+                    transform: skewX(55deg);
+                    transition: all 0.5s ease-in-out;
+                }
+            }
+            span {
+                color: rgba(255, 255, 255, 0.5);
+                transition: all 0.3s linear;
+                font-size: 20px;
+            }
+            &:last-child {
+                border: none;
+            }
+        }
+    }
+}

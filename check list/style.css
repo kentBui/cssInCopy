@@ -1,0 +1,148 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.container {
+  width: 100%;
+  height: 100vh;
+  background-image: -webkit-gradient(linear, left bottom, right top, from(#333366), color-stop(#005a94), color-stop(#0082ae), color-stop(#00a9ae), to(#00cc99));
+  background-image: linear-gradient(to right top, #333366, #005a94, #0082ae, #00a9ae, #00cc99);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.container .check-list {
+  width: 400px;
+  border: 1px solid gray;
+  background-image: -webkit-gradient(linear, left bottom, right top, from(#181883), color-stop(#0057bc), color-stop(#008ede), color-stop(#00c3ee), to(#29f6f6));
+  background-image: linear-gradient(to right top, #181883, #0057bc, #008ede, #00c3ee, #29f6f6);
+  border-radius: 10px;
+  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+}
+
+.container .check-list .item {
+  height: 50px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+  line-height: 50px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 6fr 1fr;
+      grid-template-columns: 1fr 6fr 1fr;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  position: relative;
+}
+
+.container .check-list .item input[type="checkbox"] {
+  -moz-appearance: none;
+       appearance: none;
+  -webkit-appearance: none;
+  width: 22px;
+  height: 22px;
+  margin: auto;
+  z-index: 2;
+  background-color: white;
+  border: 1px solid aqua;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+}
+
+.container .check-list .item input[type="checkbox"]:before {
+  content: "\f058";
+  font-family: "fontAwesome";
+  color: blue;
+  opacity: 0;
+  -webkit-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+  font-size: 18px;
+}
+
+.container .check-list .item input[type="checkbox"]:checked:before {
+  opacity: 1;
+}
+
+.container .check-list .item input[type="checkbox"]:checked ~ label {
+  color: #ff9900;
+}
+
+.container .check-list .item input[type="checkbox"]:checked ~ label::before {
+  left: 85%;
+}
+
+.container .check-list .item input[type="checkbox"]:checked ~ span {
+  color: #ff9900;
+}
+
+.container .check-list .item input[type="checkbox"]:hover {
+  border: 3px solid aqua;
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+
+.container .check-list .item label {
+  font-size: 20px;
+  text-transform: capitalize;
+  color: rgba(0, 0, 0, 0.8);
+  cursor: pointer;
+  -webkit-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.container .check-list .item label:hover {
+  color: cornsilk;
+  text-shadow: 0 0 5px black;
+}
+
+.container .check-list .item label:before {
+  content: "";
+  width: 120px;
+  height: 100%;
+  background-color: rgba(153, 247, 250, 0.137);
+  position: absolute;
+  top: 0;
+  left: -55px;
+  -webkit-transform: skewX(55deg);
+          transform: skewX(55deg);
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+.container .check-list .item span {
+  color: rgba(255, 255, 255, 0.5);
+  -webkit-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+  font-size: 20px;
+}
+
+.container .check-list .item:last-child {
+  border: none;
+}
+/*# sourceMappingURL=style.css.map */
