@@ -1,0 +1,48 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+ul {
+    list-style: none;
+}
+.container {
+    width: 80%;
+    margin: auto;
+    margin-top: 50px;
+    .banner {
+        text-align: center;
+        background-color: #aaa;
+    }
+    .menu {
+        ul {
+            .item {
+                width: 150px;
+                line-height: 40px;
+                padding-left: 15px;
+                background-color: greenyellow;
+                position: relative;
+                cursor: pointer;
+                user-select: none;
+                border-top: 1px dashed #ccc;
+                .dropdown {
+                    width: 100%;
+                    position: absolute;
+                    top: 0;
+                    left: 100%;
+                    background-color: indianred;
+                    display: none;
+                    li {
+                        text-transform: capitalize;
+                        line-height: 40px;
+                        padding-left: 10px;
+                        border-top: 1px solid green;
+                    }
+                    &.active {
+                        display: block;
+                    }
+                }
+            }
+        }
+    }
+}
