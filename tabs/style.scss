@@ -1,0 +1,42 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+ul {
+    list-style-type: none;
+}
+.container {
+    width: 60%;
+    height: 20vh;
+    margin: auto;
+    margin-top: 50px;
+    background-color: #f6f6f6;
+    .menu {
+        border-bottom: 1px solid #bbb;
+        ul {
+            .item {
+                width: 80px;
+                display: inline-block;
+                line-height: 40px;
+                text-align: center;
+                text-transform: uppercase;
+                cursor: pointer;
+                &.active {
+                    background-color: #aaa;
+                }
+            }
+        }
+    }
+    .info {
+        padding: 10px 15px;
+        ul {
+            .info-item {
+                display: none;
+                &.info-active {
+                    display: block;
+                }
+            }
+        }
+    }
+}
