@@ -1,0 +1,59 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.container {
+  width: 60%;
+  margin: auto;
+  margin-top: 50px;
+}
+
+.container .row {
+  width: 100%;
+}
+
+.container .row .item {
+  width: 100%;
+  background-color: #f6f6f6;
+}
+
+.container .row .item .btn {
+  line-height: 40px;
+  color: #333;
+  cursor: pointer;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  position: relative;
+}
+
+.container .row .item .btn:hover {
+  background-color: #999;
+}
+
+.container .row .item .btn.active {
+  background-color: #999;
+  position: relative;
+}
+
+.container .row .item .btn.active::after {
+  content: "\2212";
+  position: absolute;
+  top: 0;
+  right: 10px;
+}
+
+.container .row .item .btn:after {
+  content: "\002B";
+  position: absolute;
+  top: 0;
+  right: 10px;
+}
+
+.container .row .item .info {
+  max-height: 0;
+  overflow: hidden;
+}
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,47 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container {
+    width: 60%;
+    margin: auto;
+    margin-top: 50px;
+    .row {
+        width: 100%;
+        .item {
+            width: 100%;
+            background-color: #f6f6f6;
+            .btn {
+                line-height: 40px;
+                color: #333;
+                cursor: pointer;
+                transition: all 0.3s;
+                position: relative;
+                &:hover {
+                    background-color: #999;
+                }
+                &.active {
+                    background-color: #999;
+                    position: relative;
+                    &::after {
+                        content: "\2212";
+                        position: absolute;
+                        top: 0;
+                        right: 10px;
+                    }
+                }
+                &:after {
+                    content: "\002B";
+                    position: absolute;
+                    top: 0;
+                    right: 10px;
+                }
+            }
+            .info {
+                max-height: 0;
+                overflow: hidden;
+            }
+        }
+    }
+}
